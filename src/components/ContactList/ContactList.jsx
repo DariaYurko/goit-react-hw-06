@@ -1,6 +1,7 @@
-import { useSelector } from 'react-redux';
 import Contact from '../Contact/Contact';
 import css from './ContactsList.module.css';
+
+import { useSelector } from 'react-redux';
 
 const ContsctList = () => {
   // Підписалися на state  зі Store
