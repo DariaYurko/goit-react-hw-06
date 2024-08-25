@@ -1,13 +1,12 @@
 import Contact from '../Contact/Contact';
-import css from './ContactsList.module.css';
-
 import { useSelector } from 'react-redux';
+import css from './ContactsList.module.css';
 
 const ContsctList = () => {
   // Підписалися на state  зі Store
   const contacts = useSelector(state => state.contacts.contacts);
   const filtredContactValue = useSelector(state => state.filters.filterValue);
-  
+
   const filtredContactList = contacts.filter(contact => {
     return contact.name
       .toLowerCase()

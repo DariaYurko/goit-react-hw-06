@@ -1,11 +1,11 @@
-import css from './ContactForm.module.css';
+import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 import { ErrorMessage } from 'formik';
 import { Formik, Form, Field } from 'formik';
-import * as Yup from 'yup';
-
-import { addContact } from '../../redux/contactsSlice';
 import { useDispatch } from 'react-redux';
+import { addContact } from '../../redux/contactsSlice';
+
+import css from './ContactForm.module.css';
 
 const fieldValues = {
   username: '',
