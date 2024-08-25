@@ -35,7 +35,7 @@ const App = () => {
     dispatch(action);
   };
 
-  const onInputChange = event => {
+  const handleChange = event => {
     const value = event.target.value;
     // 1. Створення команди
     // 2. Доставка команди в Store
@@ -52,14 +52,11 @@ const App = () => {
   return (
     <>
       <h1>Phonebook</h1>
-
       <ContactForm onAddContact={onAddContact} />
-
       <SearchBox
         filtredContactValue={filtredContactValue}
-        handleChange={onInputChange}
+        handleChange={handleChange}
       />
-
       <ContactList
         contacts={filtredContactList}
         onDeleteContact={onDeleteContact}
